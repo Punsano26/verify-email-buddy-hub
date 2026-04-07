@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Verify Your Email</title>
+		<script src="https://cdn.tailwindcss.com"></script>
+	</head>
+	<body class="m-0 p-0 bg-[#f6f5fb] text-[#12026e]">
+		<table id="user-token" width="100%" cellpadding="0" cellspacing="0" border="0" class="w-full bg-[#f6f5fb]">
+			<tr>
+				<td align="center" class="px-4 py-10">
+					<table width="640" cellpadding="0" cellspacing="0" border="0" class="w-full max-w-[640px] bg-white rounded-2xl overflow-hidden shadow-lg">
+						<tr>
+							<td class="bg-gradient-to-r from-[#12026e] via-[#4560ea] to-[#205369] px-6 py-8">
+								<table width="100%" cellpadding="0" cellspacing="0" border="0">
+									<tr>
+										<td align="left" class="text-white">
+											<div class="text-xs uppercase tracking-[0.2em]">BuddyHub</div>
+											<div class="text-2xl font-semibold mt-2">Verify your email</div>
+											<div class="text-sm text-[#aeaeda] mt-2">By Buddy hub form Hi! San Suk Team Development</div>
+										</td>
+										<td align="right">
+											<img src="https://ik.imagekit.io/writmw3kq/buddyhublogo.png" width="120" alt="BuddyHub" class="block" />
+                    </td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+
+						<tr>
+							<td class="px-6 py-8">
+								<p class="text-base leading-6 text-[#205369]">Hello <span class="font-semibold text-[#12026e]">{{SHOW USERNAME}}</span>,</p>
+								<p class="text-base leading-6 text-[#205369] mt-4">คุณได้ขอให้ยืนยันอีเมลของคุณสำหรับ BuddyHub โปรดยืนยันภายใน 3 วัน</p>
+								<p class="text-base leading-6 text-[#205369] mt-4">บัญชีที่เชื่อมกับระบบคืออีเมล <span class="font-semibold text-[#12026e]">{{USER_EMAIL}}</span></p>
+								<p class="text-base leading-6 text-[#205369] mt-2">หากไม่ได้เป็นผู้ดำเนินการนี้ กรุณาละเว้นอีเมลฉบับนี้</p>
+
+								<div class="bg-[#f1eefb] border border-[#aeaeda] rounded-xl px-4 py-3 mt-6">
+									<div class="text-sm text-[#205369]">Link expires on</div>
+									<div class="text-lg font-semibold text-[#bb7e51]">{{EXPIRATION_DATE}}</div>
+								</div>
+
+								<div class="mt-6">
+									<a
+										href="{{INVITATION_LINK}}"
+										class="inline-block bg-[#4560ea] text-white px-10 py-3 rounded-lg text-base font-semibold">
+										Verify email
+									</a>
+								</div>
+
+								<div class="mt-6 text-sm text-[#205369]">
+									คำอธิบาย: กดปุ่มเพื่อยืนยันอีเมลและเปิดใช้งานบัญชีของคุณอย่างปลอดภัย
+								</div>
+
+								<div class="mt-8 border-t border-[#e3e0f2] pt-6">
+									<div class="text-base font-semibold text-[#12026e]">Contact us</div>
+									<div class="text-sm text-[#205369] mt-2">Need help? Contact BuddyHub Support.</div>
+									<table width="100%" cellpadding="0" cellspacing="0" border="0" class="mt-4">
+										<tr>
+											<td class="bg-[#f1eefb] rounded-lg px-3 py-4" align="center" width="48%">
+												<div class="text-sm text-[#205369]">(+66)922932011</div>
+											</td>
+											<td width="4%"></td>
+											<td class="bg-[#f1eefb] rounded-lg px-3 py-4" align="center" width="48%">
+												<div class="text-sm text-[#205369]">hisansuk.develop@hotmail.com</div>
+											</td>
+										</tr>
+									</table>
+								</div>
+							</td>
+						</tr>
+
+						<tr>
+							<td class="px-6 pb-8">
+								<div class="text-center text-xs text-[#4560ea]">This is an automated email. Please do not reply.</div>
+								<div class="text-center text-xs text-[#aeaeda] mt-3">Sent by BuddyHub System</div>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<script>
+        const path = window.location.pathname; 
+        const segments = path.split('/');
+        const token = segments[segments.length - 1];
+        if (token && token !== 'index.html') {
+            document.getElementByToken('user-token').innerText = token;
+            console.log("รับค่า token สำเร็จ:", token);
+        } else {
+            document.getElementByToken('user-token').innerText = "ไม่พบ ID";
+        }
+    </script>
+	</body>
+</html>
