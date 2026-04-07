@@ -9,19 +9,19 @@
 	<body class="m-0 p-0 bg-[#f6f5fb] text-[#12026e]">
 		<table id="user-token" width="100%" cellpadding="0" cellspacing="0" border="0" class="w-full bg-[#f6f5fb]">
 			<tr>
-				<td align="center" class="px-4 py-10">
-					<table width="640" cellpadding="0" cellspacing="0" border="0" class="w-full max-w-[640px] bg-white rounded-2xl overflow-hidden shadow-lg">
+				<td align="center" class="px-3 py-4 sm:px-4 sm:py-10">
+					<table width="640" cellpadding="0" cellspacing="0" border="0" class="w-full max-w-[640px] bg-white rounded-xl sm:rounded-2xl overflow-hidden shadow-lg">
 						<tr>
-							<td class="bg-gradient-to-r from-[#12026e] via-[#4560ea] to-[#205369] px-6 py-8">
+							<td class="bg-gradient-to-r from-[#12026e] via-[#4560ea] to-[#205369] px-4 py-6 sm:px-6 sm:py-8">
 								<table width="100%" cellpadding="0" cellspacing="0" border="0">
 									<tr>
-										<td align="left" class="text-white">
+										<td align="left" class="block w-full text-white sm:table-cell sm:w-auto">
 											<div class="text-xs uppercase tracking-[0.2em]">BuddyHub</div>
 											<div class="text-2xl font-semibold mt-2">Verify your email</div>
 											<div class="text-sm text-[#aeaeda] mt-2">By Buddy hub form Hi! San Suk Team Development</div>
 										</td>
-										<td align="right">
-											<img src="https://ik.imagekit.io/writmw3kq/buddyhublogo.png" width="120" alt="BuddyHub" class="block" />
+										<td align="right" class="block w-full pt-4 text-center sm:table-cell sm:w-auto sm:pt-0 sm:text-right">
+											<img src="https://ik.imagekit.io/writmw3kq/buddyhublogo.png" width="120" alt="BuddyHub" class="block mx-auto w-24 h-auto sm:mx-0 sm:ml-auto sm:w-[120px]" />
                     </td>
 									</tr>
 								</table>
@@ -29,7 +29,7 @@
 						</tr>
 
 						<tr>
-							<td class="px-6 py-8">
+							<td class="px-4 py-6 sm:px-6 sm:py-8">
 								<p class="text-base leading-6 text-[#205369]">Hello <span class="font-semibold text-[#12026e]">{{SHOW USERNAME}}</span>,</p>
 								<p class="text-base leading-6 text-[#205369] mt-4">คุณได้ขอให้ยืนยันอีเมลของคุณสำหรับ BuddyHub โปรดยืนยันภายใน 3 วัน</p>
 								<p class="text-base leading-6 text-[#205369] mt-4">บัญชีที่เชื่อมกับระบบคืออีเมล <span class="font-semibold text-[#12026e]">{{USER_EMAIL}}</span></p>
@@ -43,7 +43,7 @@
 								<div class="mt-6">
 									<a
 										href="{{INVITATION_LINK}}"
-										class="inline-block bg-[#4560ea] text-white px-10 py-3 rounded-lg text-base font-semibold">
+										class="block w-full text-center bg-[#4560ea] text-white px-6 py-3 rounded-lg text-base font-semibold sm:inline-block sm:w-auto sm:px-10">
 										Verify email
 									</a>
 								</div>
@@ -57,11 +57,11 @@
 									<div class="text-sm text-[#205369] mt-2">Need help? Contact BuddyHub Support.</div>
 									<table width="100%" cellpadding="0" cellspacing="0" border="0" class="mt-4">
 										<tr>
-											<td class="bg-[#f1eefb] rounded-lg px-3 py-4" align="center" width="48%">
+											<td class="block w-full bg-[#f1eefb] rounded-lg px-3 py-4 sm:table-cell sm:w-[48%]" align="center" width="48%">
 												<div class="text-sm text-[#205369]">(+66)922932011</div>
 											</td>
-											<td width="4%"></td>
-											<td class="bg-[#f1eefb] rounded-lg px-3 py-4" align="center" width="48%">
+											<td width="4%" class="hidden sm:table-cell"></td>
+											<td class="block w-full mt-3 bg-[#f1eefb] rounded-lg px-3 py-4 sm:table-cell sm:w-[48%] sm:mt-0" align="center" width="48%">
 												<div class="text-sm text-[#205369]">hisansuk.develop@hotmail.com</div>
 											</td>
 										</tr>
@@ -71,7 +71,7 @@
 						</tr>
 
 						<tr>
-							<td class="px-6 pb-8">
+							<td class="px-4 pb-6 sm:px-6 sm:pb-8">
 								<div class="text-center text-xs text-[#4560ea]">This is an automated email. Please do not reply.</div>
 								<div class="text-center text-xs text-[#aeaeda] mt-3">Sent by BuddyHub System</div>
 							</td>
